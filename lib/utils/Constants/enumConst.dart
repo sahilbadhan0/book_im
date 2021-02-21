@@ -1,0 +1,1 @@
+enum paymentType { single, monthly }

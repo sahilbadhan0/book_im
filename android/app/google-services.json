@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "109576455782",
+    "project_id": "bookim-e8c6e",
+    "storage_bucket": "bookim-e8c6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:109576455782:android:d6100344ee3be705a48fa7",
+        "android_client_info": {
+          "package_name": "com.book_im"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "109576455782-16q99bhd3juq4louhkjdlufi9qnc1e02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.book_im",
+            "certificate_hash": "ceb7784ab82a25999ab62a8436c4d13e8d826728"
+          }
+        },
+        {
+          "client_id": "109576455782-g317toouvrsd09ig4rmh82prnl9h9497.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC84TcmP73vzmsTQ0dWSK3e8yBhHuoi0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "109576455782-g317toouvrsd09ig4rmh82prnl9h9497.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

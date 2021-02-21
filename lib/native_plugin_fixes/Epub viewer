@@ -1,0 +1,7 @@
+
+// Android
+Steps:
+1. Goto Epubviewer, build.gradle
+2. In dependencies, replace
+    implementation ('com.folioreader SDK plugin version')
+with "implementation project(':folioreader')"

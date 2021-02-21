@@ -1,0 +1,57 @@
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    apply from: 'versions.gradle'
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.google.gms:google-services:4.3.4'
+
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+plugins {
+    id "com.github.spotbugs" version "2.0.0" apply(false)
+}
+
+
+// Workaround to be able to access SpotBugsTask from external gradle script.
+// More info: https://discuss.gradle.org/t/buildscript-dependencies-in-external-script/23243
+project.extensions.extraProperties.set('SpotBugsTask', com.github.spotbugs.SpotBugsTask)
+
+
+allprojects {
+
+    configurations.all {
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+        }
+    }
+
+    repositories {
+        mavenLocal()
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
